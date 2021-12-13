@@ -119,8 +119,7 @@ class _HomePageState extends State<HomePage> {
                   duration: Duration(milliseconds: 1300),
                   child: MaterialButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Request_OTP(phoneNumber: phoneNumber)));
-                      print(phoneNumber);
+                      phoneNumber == null ? null : Navigator.push(context, MaterialPageRoute(builder: (context) => Request_OTP(phoneNumber: phoneNumber)));
                     },
                     color: Colors.black,
                     minWidth: double.infinity,
